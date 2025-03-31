@@ -1,9 +1,6 @@
-import time
+#Contador de Palabras
 
-#   * ---> Important info
-#   ! ---> Carefull
-#   ? ---> Revision or consult
-#   TODO ---> Explain by itself
+import time
 
 name = input('Enter file:')
 handle = open(name, 'r')

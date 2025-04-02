@@ -140,3 +140,20 @@ t = [1, 2, 3, 4, 5]
 random.choice(t)
 random.choice(t)
 
+#Definir funciones
+
+def muestra_estribillo():
+    print('Soy un leñador, que alegria!')
+    print('Duermo toda la noche y trabajo todo el dia')
+
+#Anidar funciones
+
+def repite_estribillo():
+    muestra_estribillo()
+    muestra_estribillo()
+
+#Ejecucion de funciones
+
+repite_estribillo()
+
+

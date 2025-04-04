@@ -152,7 +152,7 @@ def repite_estribillo():
     muestra_estribillo()
     muestra_estribillo()
 
-#Ejecucion de funciones
+#Ejecucion de funcionesw
 
 repite_estribillo()
 

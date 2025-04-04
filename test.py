@@ -1,11 +1,25 @@
+import time
+import math
+import random
+
+#Variables generales
+
+errormsg = 'Error: Debes introducir un numero valido.'
+nm0msg = 'Introduce un numero mayor a 0'
+
+############################################333
+
+n = 5
+
+while n > 0:
+    print(n)
+    n = n-1
+    time.sleep(1)
+
+print('Despegue!!')
 
 
-def repite_estribillo():
-    muestra_estribillo()
-    muestra_estribillo()
+##############################################
 
-def muestra_estribillo():
-    print('Soy un leñador, que alegria!')
-    print('Duermo toda la noche y trabajo todo el dia')
+time.sleep(3)
 
-repite_estribillo()

@@ -47,26 +47,33 @@ nm0msg = 'Introduce un numero mayor a 0'
 name = input('Introduzca tu nombre:\n')
 print('Hola, ' + name)
 
-horas = float(input('Cuantas horas trabaja usted?\n'))
-try:
-    if horas < 1:
-        print(nm0msg)
-        exit()
-except ValueError:
-    print(errormsg)
-    exit()
+def calculosalario():
 
-try:
-    tarifa = float(input('Cuanto cobra por hora?\n'))
-    if tarifa < 0:
-        print(nm0msg)
-        exit()
-    salario = float(horas) * float(tarifa) * 1.5
-    round(salario)
-    print(f'Su salario es {salario}')
+    try:
+        horas = float(input('Cuantas horas trabaja usted?\n'))
+        if horas < 1:
+            print(nm0msg)
+            return
+    except ValueError:
+        print(errormsg)
+        return
 
-except ValueError:
-    print(errormsg)
+    try:
+        tarifa = float(input('Cuanto cobra por hora?\n'))
+        if tarifa <= 0:
+            print(nm0msg)
+            return
+    except ValueError:
+        print(errormsg)
+        return
+
+    if horas > 40:
+        horasextra = horas - 40 
+        salario = (40 * tarifa) + (horasextra * tarifa * 1.5)
+    else:
+        salario = float(horas) * float(tarifa)
+    
+    print(f'Su salario es {salario:.2f}')
 
 #Datos para ver como funciona python y evaluar
 
@@ -105,17 +112,16 @@ except ValueError:
 
 #Puntuacion entre 1.0 y 0.6
 
-puntuacion = float(input('Indica tu puntuacion entre 0.0 y 1.0\n'))
+def puntuacion(a):
+    try:
+        if a >= 0.9: print('Sobresaliente')
+        elif a >= 0.8: print('Notable')
+        elif a >= 0.7: print('Bien')
+        elif a >= 0.6: print('Suficiente')
+        else: print('Insuficiente')
 
-try:
-    if puntuacion >= 0.9: print('Sobresaliente')
-    elif puntuacion >= 0.8: print('Notable')
-    elif puntuacion >= 0.7: print('Bien')
-    elif puntuacion >= 0.6: print('Suficiente')
-    else: print('Insuficiente')
-
-except ValueError:
-    print(errormsg)
+    except ValueError:
+        print(errormsg)
 
 time.sleep(3)
 
@@ -156,4 +162,12 @@ def repite_estribillo():
 
 repite_estribillo()
 
+#ITERACION:
 
+#Funcion de despegue juju:
+
+n = 5
+while n > 0:
+    print(n)
+    n = n-1
+print('Despegue!!')

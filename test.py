@@ -7,19 +7,37 @@ import random
 errormsg = 'Error: Debes introducir un numero valido.'
 nm0msg = 'Introduce un numero mayor a 0'
 
-############################################333
+##############################################
 
-n = 5
 
-while n > 0:
-    print(n)
-    n = n-1
-    time.sleep(1)
+amigos = ['Joseph', 'Glenn', 'Sally']
+for amigo in amigos:
+    print(f'Buenos dias querido {amigo}')
+print('Cvmooo')
 
-print('Despegue!!')
-
+time.sleep(3)
 
 ##############################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 time.sleep(3)
 

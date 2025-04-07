@@ -158,7 +158,7 @@ def repite_estribillo():
     muestra_estribillo()
     muestra_estribillo()
 
-#Ejecucion de funcionesw
+#Ejecucion de funciones
 
 repite_estribillo()
 
@@ -166,8 +166,56 @@ repite_estribillo()
 
 #Funcion de despegue juju:
 
+print('Atentos maidai maidai, cuidado con las siguientes indicaciones: ATENCION!!')
+
+time.sleep(2)
+
+print('El cohete despegara en: \n')
+
+time.sleep(1)
+
 n = 5
+
 while n > 0:
     print(n)
     n = n-1
+    time.sleep(1)
+
 print('Despegue!!')
+
+# Repetidor de palabras:
+
+print('Esto es un repetidor! Escriba lo que desees, el programa solo se cerrara cuando typees exactamente "exit"')
+
+while True:
+    a = input('> ')
+    print(a)
+    if a == 'exit':
+        break
+print('Espero hayas disfrutado el programa!')   
+
+################################################
+
+#Recorriendo lista:
+amigos = ['Joseph', 'Glenn', 'Sally']
+for amigo in amigos:
+    print(f'Buenos dias querido :{amigo}')
+print('Cvmooo')
+
+time.sleep(3)
+
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+

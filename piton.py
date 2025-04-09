@@ -230,6 +230,24 @@ print(f'Su total es: {total}')
 
 ########################################################
 
+#Encontrar mayor:
+
+try:
+    mayor = None
+    print(f'Antes: {mayor}')
+    for i in [3,41,12,9,74,15]:
+        if mayor is None or i > mayor:
+            mayor = i
+        print(f'Bucle: {i} {mayor}')
+    print(f'El mayor numero es: {mayor}')
+except:
+    print('Se ignoro un valor invalido')
+
+
+
+
+
+
 
 
 

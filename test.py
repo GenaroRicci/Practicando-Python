@@ -9,19 +9,16 @@ nm0msg = 'Introduce un numero mayor a 0'
 
 ##############################################
 
-
-amigos = ['Joseph', 'Glenn', 'Sally']
-for amigo in amigos:
-    print(f'Buenos dias querido {amigo}')
-print('Cvmooo')
-
-time.sleep(3)
+total = 0
+list_el2 = [5, 10, 6, 9, 5, 4, 6]
+for i in list_el2:
+    total = total + i
+print(f'Su total es: {total}')
 
 ##############################################
 
 
-
-
+################################################
 
 
 

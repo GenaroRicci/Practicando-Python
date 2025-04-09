@@ -196,6 +196,8 @@ print('Espero hayas disfrutado el programa!')
 
 ################################################
 
+# TRABAJOS DE ITERACION CON LISTAS:
+
 #Recorriendo lista:
 amigos = ['Joseph', 'Glenn', 'Sally']
 for amigo in amigos:
@@ -204,8 +206,29 @@ print('Cvmooo')
 
 time.sleep(3)
 
-#
+##################################################
 
+#Contador de cantidad
+
+counter = 0
+
+list_el1 = [1, 2, 3, 8, 5, 6, 7, 8]
+
+for elemento in list_el1:
+    counter = counter + 1
+print(f'Su lista tiene {counter} elementos')
+
+########################################################
+
+#Suma de elementos
+
+total = 0
+list_el2 = [5, 324, 6, 123, 5, 4, 6]
+for i in list_el2:
+    total = total + i
+print(f'Su total es: {total}')
+
+########################################################
 
 
 

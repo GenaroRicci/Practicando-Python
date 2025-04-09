@@ -233,15 +233,65 @@ print(f'Su total es: {total}')
 #Encontrar mayor:
 
 try:
-    mayor = None
-    print(f'Antes: {mayor}')
-    for i in [3,41,12,9,74,15]:
-        if mayor is None or i > mayor:
-            mayor = i
-        print(f'Bucle: {i} {mayor}')
-    print(f'El mayor numero es: {mayor}')
+    while True:
+        mayor = None
+        print(f'Antes: {mayor}')
+        for i in [3,41,12,9,74,15]:
+            if mayor is None or i > mayor:
+                mayor = i
+            print(f'Bucle: {i} {mayor}')
+        print(f'El mayor numero es: {mayor}')
 except:
     print('Se ignoro un valor invalido')
+
+##########################################################
+
+#Encontrar menor:
+
+try:
+    menor = None
+    print(f'Antes: {menor}')
+    for i in [3,41,12,9,74,15]:
+        if menor is None or i < menor:
+            menor = i
+        print(f'Bucle: {i} {menor}')
+    print(f'El menor numero es: {menor}')
+except:
+    print('Se ignoro un valor invalido')
+
+################################################################
+
+# Una vez se haya introducido “fin”,
+# muestra por pantalla el total, la cantidad de números y la media de
+# esos números.
+
+total = 0
+counter = 0
+errormsg = " Error: Ingrese un número válido."
+
+while True:
+    value = input('Introduzca un número:\n')
+
+    if value == 'fin':
+        if counter > 0:
+            media = total / counter
+            print(f'El total es: {total:.2f}, la cantidad es: {counter} y el promedio es: {media:.2f}')
+        else:
+            print('No se ingresaron números válidos.')
+        break
+
+    try:
+        total = total + float(value)
+        counter = counter + 1
+    except ValueError:
+        print(errormsg)
+
+###########################################################################
+
+
+
+
+
 
 
 

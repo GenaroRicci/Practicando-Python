@@ -344,3 +344,31 @@ while True:
 
     except ValueError:
         print(errormsg)
+
+###############################################################
+
+#Ejercicio 2 listas: Escribe otro programa que pida una lista de números como
+#la anterior y al final muestre por pantalla el máximo y mínimo de los
+#números, en vez de la media.
+
+max = None
+min = None
+lista1 = input('>')
+for i in lista1:
+    if max is None or i > max:
+        max = i
+    if min is None or i < min:
+        min = i
+print(f'Su mayor numero es {max} y su menor numero es {1}')
+
+#Para mañana, lo que propuso el chat
+
+
+
+
+
+
+
+
+
+

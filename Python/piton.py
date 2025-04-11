@@ -351,17 +351,44 @@ while True:
 #la anterior y al final muestre por pantalla el máximo y mínimo de los
 #números, en vez de la media.
 
-max = None
-min = None
-lista1 = input('>')
-for i in lista1:
-    if max is None or i > max:
-        max = i
-    if min is None or i < min:
-        min = i
-print(f'Su mayor numero es {max} y su menor numero es {1}')
+listain = input('>')
 
-#Para mañana, lo que propuso el chat
+lista1 = []
+
+#float(n.strip()) for n in lista1.split(',')
+#max = None
+#min = None
+
+for n in listain.split(','):
+    try:
+        numero = float(n.strip())
+        lista1.append(numero)
+    except ValueError:
+        print(f'{errormsg} Valor ignorado: "{n.strip()}"')
+
+if lista1:
+    maximo = max(lista1)
+    minimo = min(lista1)
+    print(f'Su mayor numero es {max} y su menor numero es {min}')
+else:
+    print('No hay numeros validos')
+
+#revisar try except
+
+#############################################################
+
+#Listas
+
+
+
+
+
+
+
+
+
+
+
 
 
 

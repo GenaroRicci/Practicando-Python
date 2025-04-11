@@ -6,39 +6,34 @@ nm0msg = 'Introduce un numero mayor a 0'
 
 ###################################################################
 
+print('Escribe tu lista de numeros separados por una coma (,):')
 
-max = None
-min = None
+listain = input('>')
 
-list = [3, 6, 13, 9, 55, 41, 34, 1, 765, 95]
-try:
-    for i in list:
-        if max is None or i > max:
-            max = i
-        if min is None or i < min:
-            min = i
-    print(f'Su mayor numero es {max} y su menor es {min}')
-except ValueError:
-        print(errormsg)
+lista1 = []
+
+#float(n.strip()) for n in lista1.split(',')
+#max = None
+#min = None
+
+for n in listain.split(','):
+    try:
+        numero = float(n.strip())
+        lista1.append(numero)
+    except ValueError:
+        print(f'{errormsg} Valor ignorado: "{n.strip()}"')
+
+if lista1:
+    maximo = max(lista1)
+    minimo = min(lista1)
+    print(f'Su mayor numero es {maximo} y su menor numero es {minimo}')
+else:
+    print('No hay numeros validos')
+
+
 ##############################################
 
 ##############################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 time.sleep(3)
 

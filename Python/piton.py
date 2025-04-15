@@ -345,19 +345,14 @@ while True:
     except ValueError:
         print(errormsg)
 
-###############################################################
+###################################################
 
 #Ejercicio 2 listas: Escribe otro programa que pida una lista de números como
 #la anterior y al final muestre por pantalla el máximo y mínimo de los
 #números, en vez de la media.
 
 listain = input('>')
-
 lista1 = []
-
-#float(n.strip()) for n in lista1.split(',')
-#max = None
-#min = None
 
 for n in listain.split(','):
     try:
@@ -373,24 +368,60 @@ if lista1:
 else:
     print('No hay numeros validos')
 
-#revisar try except
-
 #############################################################
-
 #Listas
 
+#Ejercicio 1: Escribe un bucle while que comience con el último carácter
+#en la cadena y haga un recorrido hacia atrás hasta el primer carácter
+#en la cadena, imprimiendo cada letra en una línea independiente.
 
+fruta = 'banana'
+i = len(fruta)
+while i > 0:
+    print(fruta[i-1])
+    i = i-1
 
+###################################################
+#Recorrer
+for character in fruta:
+    print(character)
 
+###################################################
+#Rebanar str
 
+print(fruta[0:])
+print(fruta[0:3])
+print(fruta[3:])
 
+###################################################
+#Concatenar str
 
+saludo = 'Hello world'
+nuevo_saludo = saludo[0:] + ', you are god!'
 
+###################################################
+#Contador
 
+palabra = 'banana'
+counter = 0
+for letra in palabra:
+        if letra == 'a' :
+            counter = counter + 1
+print(counter)
 
+#Este programa demuestra otro patrón de computación llamado contador. La variable contador es inicializada a 0 y después se incrementa cada vez que una “a” es encontrada. Cuando el bucle termina, contador contiene el resultado: el número total de a’s.
 
+###################################################
+#Definiendo funcion de contador;
 
+def contador(palabra, letra):
+    counter = 0
+    for character in palabra:
+        if character == letra:
+            counter =+ 1
+    return counter
 
+###################################################
 
 
 

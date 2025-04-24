@@ -422,6 +422,59 @@ def contador(palabra, letra):
     return counter
 
 ###################################################
+#Operador in
+
+"'a' in 'banana'"
+'True'
+#Capta letras
+"'semilla' in 'banana'"
+'False'
+#No logica
+
+###################################################
+#Operaciones de comparacion en strings:
+
+if palabra < 'banana':
+    print(f'Tu palabra {palabra} esta antes de banana')
+elif palabra > 'banana':
+    print(f'Tu palabra {palabra} esta despues de banana')
+else:
+    print('muy bien, bananas')
+
+#MAYUSCULAS PRIMERO A MINUSCULAS
+#Piña antes que banana
+#Para ordenar alfabeticamente por ejemplo, conviene convertir a un formato estandar:
+#Ej todas minusculas: palabra.lower()
+
+#####################################################
+#Programa de contraseña para usuario chatgpt:
+
+correct_pswd = 'Paiton'
+user_pswd = ''
+while user_pswd != correct_pswd:
+    user_pswd = input('Escribe tu contraseña:\n')
+    print('Incorrecta')
+print('Contraseña aceptada!')
+
+#####################################################
+#Extrayendo datos particulares de un string
+
+dato = 'From stephen.merquard@utc.ac.za Sat Jan 5 09:14:16 2008'
+positionarroba = dato.find('@') #Encuentra la posicion en el str
+print(f'Posicion de arroba :{positionarroba}')
+positionespacios = dato.find(' ', positionarroba)
+print(f'Posicion del espacio :{positionespacios}')
+adress = dato [positionarroba + 1: positionespacios] #Empieza desde la arroba, le suma 1 y llega hasta la posicion del espacio del dato
+print(f'El adress es: {adress}')
+
+
+
+
+
+
+
+
+
 
 
 

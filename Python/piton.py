@@ -467,7 +467,38 @@ print(f'Posicion del espacio :{positionespacios}')
 adress = dato [positionarroba + 1: positionespacios] #Empieza desde la arroba, le suma 1 y llega hasta la posicion del espacio del dato
 print(f'El adress es: {adress}')
 
+######################################################
+#Te paso mail, conseguime nombre y apellido y edad:
+mail = 'Genaro_Ricci_26@gmail.com'
+endname = mail.find('_')#Encuentra donde limita nombre y da un int
+endsurname = mail.find('_', endname +1)
+endage = mail.find('@', endsurname+1)
+name = mail[0: endname]
+surname = mail[endname+1: endsurname]
+age = mail[endsurname+1: endage]
+print(name)
+print(surname)
+print(age)
+#######################################################
+#Codigo mas pro:
 
+mail = 'Genaro_Ricci_26@gmail.com'
+
+partes = mail.split('_') #['Genaro', 'Ricci', '26@gmail.com']
+name = partes[0] 
+surname = partes[1]
+age = int(partes[2].split('@')[0])#Python va a resolver el parentesis y recien ahi aplicara la funcion int, el parentesis se resuelve de izquierda a derecha
+print(name, surname, age)
+
+#######################################################
+#Utiliza find y una parte de la cadena para extraer la porción de la cadena, después del carácter dos puntos y después utiliza la función float para convertir la cadena extraída en un número de punto flotante.
+
+stringfind = 'X-DSPAM-Confidence:0.8475'
+numb = stringfind.find(':')
+nuevo_num = float(stringfind[numb+1:])
+print(nuevo_num)
+
+#######################################################
 
 
 

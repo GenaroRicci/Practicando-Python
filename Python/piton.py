@@ -499,6 +499,50 @@ nuevo_num = float(stringfind[numb+1:])
 print(nuevo_num)
 
 #######################################################
+#Probando count
+#str.count(substring, start osea posicion del string donde empieza, end posicion del string donde termina)
+string_1 = 'bdbfndfdfjdujasodkasodrhgwweifbbbb'
+counted = string_1.count('b')
+print(counted)
+
+#########################################################
+
+#Probando replace:
+text_1 = 'apple apple apple'
+print(text_1.replace('apple', 'orange', 2))
+#output -> orange orange apple
+
+##########################################################
+#Contando lineas de archivo
+
+manejador_archivo = open('mbox.txt')
+counter = 0
+for linea in manejador_archivo:
+    counter = counter + 1
+print(f'Contador de lineas : {contador}')
+
+##########################################################
+#Lee el archivo
+manejador_archivo = open('mbox.txt')
+inp = manejador_archivo.read()
+print(len(inp))
+print(inp[:20])
+
+###########################################################
+#Startswith para busqueda smart
+try:
+    manejador_archivo = open('mbodx.txt')
+    counter = 0
+    for linea in manejador_archivo:
+        linea = linea.rstrip()#Elimina todos los espacios en blanco a la derecha de una cadenas
+        if linea.startswith('From:'):
+            print(linea)
+except FileNotFoundError:
+    print('No se pudo acceder al archivo')
+############################################################
+#
+
+
 
 
 

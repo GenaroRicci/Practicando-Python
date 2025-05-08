@@ -534,7 +534,7 @@ try:
     manejador_archivo = open('mbox.txt')
     counter_lineas = 0
     for linea in manejador_archivo:
-        linea = linea.rstrip()#Elimina todos los espacios en blanco a la derecha de una cadenas
+        linea = linea.rstrip()#Elimina todos los espacios en blanco A LA DERECHA (R de right strip)de una cadenas
         if linea.startswith('From:'):
             counter_lineas = counter_lineas + 1
             print(linea)
@@ -542,11 +542,53 @@ try:
 except FileNotFoundError:
     print('No se pudo acceder al archivo')
 #########################################################
+#Metodo find para encontrar algo en particular:
+
+man_a = open('mbox.txt')
+for linea in man_a:
+    linea = linea.strip()
+    if linea.find('@uct.ac.za') == -1: continue
+    print(linea)
+####################################
+#Metodo alterno mas simple:
+man_a = open('mbox.txt')
+for linea in man_a:
+    linea = linea.strip()
+    if '@uct.ac.za' not in linea:
+        continue
+    print(linea)
+#########################################################
+#Hacer que el archivo lo maneje el usuario:
+name_file = input('Ingresa el nombre del archivo para escanear\n')
+file_handler = open(name_file)
+counter = 0
+for linea in file_handler:
+    if linea.startswith('Subject:'):
+        counter += 1
+print(f'Hay {counter} lineas de asunto "Subject" en {name_file}')
+
+############################################################
+#Evitamos los trolles:
+
+name_file = input('Ingresa el nombre de tu archivo:\n')
+try:
+    file_handler = open(name_file)
+except FileNotFoundError:
+    print(f'No se pudo abrir el archivo: {name_file}')
+    exit()
+#Buena practica no usar el try except en todo el codigo, sino en lo que puede fallar unicamente
 
 
+counter = 0
+for line in file_handler:
+    if line.startswith('Subject:'):
+        counter += 1
 
+print(f'Hay {counter} lineas en de asunto "Subject" en {name_file}')
 
+#################################################################
 
+#pag 90
 
 
 

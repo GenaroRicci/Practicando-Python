@@ -14,3 +14,4 @@ print(inp[:20])
 
 time.sleep(3)
 
+    

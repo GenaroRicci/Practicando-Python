@@ -577,7 +577,7 @@ except FileNotFoundError:
     print(f'No se pudo abrir el archivo: {name_file}')
     exit()
 #Buena practica no usar el try except en todo el codigo, sino en lo que puede fallar unicamente
-
+#sigue el codigo
 
 counter = 0
 for line in file_handler:
@@ -587,17 +587,61 @@ for line in file_handler:
 print(f'Hay {counter} lineas en de asunto "Subject" en {name_file}')
 
 #################################################################
+#Escribir en un archivo
 
-#pag 90
+fsal = open('salida.txt', 'w')
+print(fsal)
+linea1= "Aqui esta el zarzo, \n"
+fsal.write(linea1)
+linea2 = 'el simbolo de nuestra tierra. \n'
+fsal.write(linea2)
+fsal.close()
 
+#################################################################
+#La funcion nativa "repr()" sirve para depurar espacios en blancos "Invisibles" para el interprete de Python
+s = "1 2\t 3\n 4"
+print(s)
+print(repr(s))
 
+###################################################################
+#Ejercicios:
 
+#Escribe un programa que lea un archivo e imprima su contenido linea por linea todo en mayuscula.
 
+try:
+    file_handler = open("mbox-short.txt")
+except FileNotFoundError:
+    print("No se encontro el archivo")
 
+for line in file_handler:
+    line = line.upper().strip()
+    print(line)
 
+#######################################################################
+#Escribe un programa que solicite un nombre de archivo y despues lea ese archivo buscando las lineas que tengan la siguiente forma: "X-DSPAM-Confidence: 0.8475", cuando la encuentres ponla aparte para extraer el numero decimal de la linea, cuenta esas lineas y despues calcula el total acumulado de los valores de spam-confidence, cuando llegues al final del archivo imprime el valor medio de spamconfidence
 
+file_name = input("Escribe el nombre de tu archivo\n")
 
+if file_name =="na na boo boo":
+    print("NA NA BOO BOO PARA TI - Te he atrapado!")
+    quit()
+    
+try:
+    file_handler = open(file_name)
+except FileNotFoundError:
+    print(f"Tu archivo: {file_name} no fue encontrado.")
+    quit()
 
+counter = 0
+total_number = 0
+for line in file_handler:
+    if line.startswith("X-DSPAM-Confidence:"):
+        total_number += float(line.split(":")[1].strip())
+        counter += 1
+if counter:
+    print(f"El total de los valores en promedio es {total_number/counter:.4f}")
+else:
+    print("No se encontraron lineas que coincidan")
 
 
 
